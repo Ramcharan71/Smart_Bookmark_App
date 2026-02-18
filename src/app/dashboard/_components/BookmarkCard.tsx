@@ -55,7 +55,7 @@ export default function BookmarkCard({ bookmark, onDelete }: Props) {
       {/* Delete button */}
       <button
         onClick={() => onDelete(bookmark.id)}
-        className="shrink-0 rounded-xl p-1.5 text-gray-800 opacity-0 transition-all hover:bg-red-400/20 hover:text-red-600 group-hover:opacity-100"
+        className="shrink-0 rounded-xl p-1.5 text-gray-800 transition-all hover:bg-red-400/20 hover:text-red-600"
         aria-label="Delete bookmark"
       >
         <svg

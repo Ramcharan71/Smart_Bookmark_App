@@ -106,10 +106,10 @@ export default function BookmarkList({ initialBookmarks, user }: Props) {
       <div className="relative z-10">
         {/* ── Header bar ── */}
         <header className="w-full">
-          <div className="mx-auto flex h-20 max-w-3xl items-center justify-between px-6">
+          <div className="flex h-20 items-center justify-between px-8">
             <div className="flex items-center gap-2">
               <span className="text-2xl">🔖</span>
-              <span className="text-xl font-bold text-gray-900">Smart Bookmark</span>
+              <span className="text-2xl font-bold text-gray-900">Smart Bookmark</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="hidden text-base font-semibold text-gray-900 sm:inline">
