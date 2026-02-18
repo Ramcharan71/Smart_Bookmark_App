@@ -23,7 +23,7 @@ export default function BookmarkCard({ bookmark, onDelete }: Props) {
   const timeAgo = getRelativeTime(bookmark.created_at);
 
   return (
-    <div className="group flex items-center gap-4 rounded-xl bg-white px-5 py-4 shadow-sm transition-all hover:shadow-md">
+    <div className="group flex items-center gap-4 rounded-2xl border border-white/30 bg-white/20 px-5 py-4 shadow-md backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/30 hover:shadow-lg">
       {/* Favicon */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -40,22 +40,22 @@ export default function BookmarkCard({ bookmark, onDelete }: Props) {
           href={bookmark.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="block truncate font-medium text-gray-900 transition-colors hover:text-indigo-600"
+          className="block truncate font-semibold text-gray-900 transition-colors hover:text-violet-700"
         >
           {bookmark.title}
         </a>
-        <p className="truncate text-sm text-gray-400">{hostname}</p>
+        <p className="truncate text-sm text-gray-800">{hostname}</p>
       </div>
 
       {/* Timestamp */}
-      <span className="hidden shrink-0 text-xs text-gray-400 sm:inline">
+      <span className="hidden shrink-0 text-sm font-medium text-gray-800 sm:inline">
         {timeAgo}
       </span>
 
       {/* Delete button */}
       <button
         onClick={() => onDelete(bookmark.id)}
-        className="shrink-0 rounded-lg p-1.5 text-gray-400 opacity-0 transition-all hover:bg-red-50 hover:text-red-500 group-hover:opacity-100"
+        className="shrink-0 rounded-xl p-1.5 text-gray-800 opacity-0 transition-all hover:bg-red-400/20 hover:text-red-600 group-hover:opacity-100"
         aria-label="Delete bookmark"
       >
         <svg

@@ -57,9 +57,9 @@ export default function AddBookmarkForm({ userId }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-xl bg-white p-6 shadow-sm"
+      className="rounded-2xl border border-white/30 bg-white/20 p-6 shadow-lg backdrop-blur-xl"
     >
-      <h2 className="mb-4 text-lg font-semibold text-gray-900">
+      <h2 className="mb-4 text-lg font-bold text-gray-900">
         Add a Bookmark
       </h2>
 
@@ -69,26 +69,26 @@ export default function AddBookmarkForm({ userId }: Props) {
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="flex-1 rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 outline-none transition-colors focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+          className="flex-1 rounded-xl border border-white/40 bg-white/30 px-4 py-2.5 text-base text-gray-900 placeholder-gray-700/50 outline-none backdrop-blur-sm transition-all focus:border-violet-400 focus:ring-2 focus:ring-violet-400/30"
         />
         <input
           type="text"
           placeholder="https://example.com"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          className="flex-2 rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 outline-none transition-colors focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+          className="flex-2 rounded-xl border border-white/40 bg-white/30 px-4 py-2.5 text-base text-gray-900 placeholder-gray-700/50 outline-none backdrop-blur-sm transition-all focus:border-violet-400 focus:ring-2 focus:ring-violet-400/30"
         />
         <button
           type="submit"
           disabled={loading}
-          className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="rounded-xl bg-violet-600 px-5 py-2.5 text-base font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-violet-700 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading ? "Saving…" : "Add"}
         </button>
       </div>
 
       {error && (
-        <p className="mt-3 text-sm text-red-600">{error}</p>
+        <p className="mt-3 text-base font-medium text-red-900">{error}</p>
       )}
     </form>
   );
